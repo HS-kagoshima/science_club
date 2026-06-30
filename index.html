@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="phot.css" />
+    <link rel="stylesheet" type="text/css" href="bun.css" />
+    <title>science_club</title>
+</head>
+<body class="slight-left">
+    <script>
+    const password = "ku_science";  // ← 好きなパスワードに変更
+
+    const input = prompt("Enter password to access this page:");
+
+    if (input !== password) {
+        alert("Wrong password.");
+        location.href = "https://www.google.com"; // 間違えたら別ページへ飛ばす
+    }
+</script>
+    
+    <h1 class="main-title">Thank you for joining our Science Club Project!!!!!<br> In Kagoshima University </h1>
+    
+    <p style="text-align:center"; class="middle">We give astronomical images we took for you!</p>
+    
+
+    <h2 class="above">Galary</h2>
+    <p class="middle">
+        Please click these pictures below. You can download them.<br>
+        <img src="images/tubaki.jpg" width="300"><br>
+
+        <a href="images/tubaki.jpg" download="plant_photo.jpg"><br>
+        写真をダウンロード
+    </a>
+    </p>
+
+    
+</body>
+</html>

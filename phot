@@ -1,0 +1,126 @@
+.img-frame{
+   position: relative;
+   width: 70%;
+   height: 400px;
+   overflow: hidden;
+   margin: 0 auto;
+}
+
+
+
+@media screen and (max-width: 767px){
+   .img-frame{
+      width: 100%;
+      height: 200px;
+   }
+}
+
+.img-01, .img-02, .img-03, .img-04, .img-05, .img-06{
+   position: absolute;
+   top:0;
+   left:0;
+   width: 100%;
+   height: 100%;
+   background-size: cover;
+   background-repeat: no-repeat;
+   opacity: 0; /* ← 最初は透明 */
+}
+
+/* 画像設定 */
+.img-01{ background-image: url('sakura.jpg'); animation: slide-01 36s infinite; }
+.img-02{ background-image: url('ajisai.jpg'); animation: slide-02 36s infinite; }
+.img-03{ background-image: url('asagao.jpg'); animation: slide-03 36s infinite; }
+.img-04{ background-image: url('higanbana.jpg'); animation: slide-04 36s infinite; }
+.img-05{ background-image: url('sazanka.jpg'); animation: slide-05 36s infinite; }
+.img-06{ background-image: url('tubaki.jpg'); animation: slide-06 36s infinite; }
+
+/* 1枚あたり 16% の時間を割り当ててフェード */
+@keyframes slide-01 {
+  0% {opacity:0;}
+  0% {opacity:0;}
+  4% {opacity:1;}
+  16% {opacity:1;}
+  20% {opacity:0;}
+  100% {opacity:0;}
+}
+
+@keyframes slide-02 {
+  0% {opacity:0;}
+  16% {opacity:0;}
+  20% {opacity:1;}
+  32% {opacity:1;}
+  36% {opacity:0;}
+  100% {opacity:0;}
+}
+
+@keyframes slide-03 {
+  0% {opacity:0;}
+  32% {opacity:0;}
+  36% {opacity:1;}
+  48% {opacity:1;}
+  52% {opacity:0;}
+  100% {opacity:0;}
+}
+
+@keyframes slide-04 {
+  0% {opacity:0;}
+  48% {opacity:0;}
+  52% {opacity:1;}
+  64% {opacity:1;}
+  68% {opacity:0;}
+  100% {opacity:0;}
+}
+
+@keyframes slide-05 {
+  0% {opacity:0;}
+  64% {opacity:0;}
+  68% {opacity:1;}
+  80% {opacity:1;}
+  84% {opacity:0;}
+  100% {opacity:0;}
+}
+
+@keyframes slide-06 {
+  0% {opacity:0;}
+  80% {opacity:0;}
+  84% {opacity:1;}
+  96% {opacity:1;}
+  100% {opacity:1;}
+}
+
+.img-01{
+ background-position: 0 -80px;
+ }
+ .img-02{
+ background-position: 0 -100px;
+ }
+ .img-03{
+ background-position: 0 -290px;
+ }
+ .img-04{
+ background-position: 0 -110px;
+ }
+ .img-05{
+ background-position: 0 -300px;
+ }
+      .img-06{
+      background-position: 0 -100px;
+      }
+
+
+
+
+
+.photo {
+    display: block;      /* ← 画像をブロック扱いにする */
+    margin: 0 auto; 
+    justify-content: center;  /* ← 必要なら上下も調整 */
+    background-size: cover;        /* ← サイズ調整（任意） */
+}
+
+.photo_QR {
+    display: block;      /* ← 画像をブロック扱いにする */
+    margin: 20px 240px;   /* ← 必要なら上下も調整 */
+    width: 10%;
+    background-size: cover;        /* ← サイズ調整（任意） */
+}

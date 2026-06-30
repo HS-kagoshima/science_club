@@ -1,0 +1,109 @@
+.slight-left {
+    margin-left: 80px;
+    margin-right: 80px;   /* ← ここを調整して「少し左に寄せる」 */
+}
+
+body {
+    padding-bottom: 100px;   /* ← 好きな値に調整できる */
+}
+
+.middle {
+  /*真ん中の要素*/
+  padding: 10px;
+  margin: 10px;
+  font-size: 20px;
+
+}
+.above {
+  background: skyblue;
+  font-size: 30px;
+  
+}
+.under {
+  background: silver;
+}
+
+.colorful {
+  color: red;
+  padding: 10px;
+  margin: 10px;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 50px;
+    background: linear-gradient(to right,
+        rgb(255, 189, 220),
+        rgb(255, 141, 217),
+        rgb(145, 255, 0),
+        rgb(217, 255, 2),
+        rgb(255, 0, 0),
+        rgb(215, 210, 252),
+        violet);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+
+@media screen and (max-width: 767px) {
+
+    /* body の左右余白をさらに減らす */
+    .slight-left {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    /* タイトルだけスマホ用に調整 */
+    .main-title {
+        font-size: 28px;
+        line-height: 1.2;
+        padding: 0 5px;
+        word-break: keep-all;
+
+        /* ← ここが重要！ */
+        background-clip: text;
+        -webkit-background-clip: text;   /* ← これが抜けてた！ */
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+    }
+
+    /* 中央テキスト */
+    .middle {
+        font-size: 16px;
+        padding: 5px;
+        margin: 8px;
+    }
+
+    /* 見出し */
+    .above {
+        font-size: 22px;
+        padding: 5px 10px;
+    }
+
+    /* 画像は画面幅に合わせる */
+    .photo {
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    /* QRコード画像 */
+    .photo_QR {
+        width: 40%;
+        margin: 10px auto;
+    }
+
+    /* スライドショーの枠 */
+    .img-frame {
+        width: 100%;
+        height: 180px;
+    }
+
+    /* 背景画像の位置をスマホ用に調整（ズレ防止） */
+    .img-01, .img-02, .img-03, .img-04, .img-05, .img-06 {
+        background-position: center;
+    }
+}
